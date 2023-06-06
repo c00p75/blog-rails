@@ -52,11 +52,7 @@
 
 - Users will be able to delete their own blog posts.
 
-<<<<<<< HEAD
 - Users will be able to comment on blog posts and reply to comments.
-=======
-- Users will be able to comment on blog posts.
->>>>>>> 39f8c3b4ca640b9d6ee226891331d97ed4abcf23
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
