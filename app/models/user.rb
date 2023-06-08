@@ -5,7 +5,5 @@ class User < ApplicationRecord
   has_many :comments    # class_name and foreign key are not neccesary because they are implied.
   has_many :likes
 
-  def recent_posts
-    posts.order(created_at: :desc).limit(3)
-  end
+  scope :recent_posts, -> (user){ user.posts.order(created_at: :desc).first(3) }
 end
