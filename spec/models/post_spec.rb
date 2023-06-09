@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  before(:example) do
+  before(:context) do
     @user = User.create(name: 'George R Martin', photo: '', bio: 'https//photo.png', posts_counter: 0)
     @post = Post.create(author: @user, title: 'post 1', text: 'content', comments_counter: 3, likes_counter: 3)
   end

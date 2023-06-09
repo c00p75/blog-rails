@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :user do
-  before(:all) do
+  before(:context) do
     @user = User.create(name: 'George R Martin', photo: '', bio: 'https//photo.png', posts_counter: 0)
   end
 
