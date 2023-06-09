@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :user do
   before(:all) do
-    @user = User.create(name: 'John Doe', photo: 'live to photo', bio: 'live to bio', posts_counter: 0)
+    @user = User.create(name: 'George R Martin', photo: '', bio: 'https//photo.png', posts_counter: 0)
   end
 
   describe 'Validations' do
