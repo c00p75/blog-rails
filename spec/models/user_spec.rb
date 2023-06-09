@@ -24,10 +24,10 @@ RSpec.describe User, type: :user do
 
   describe 'scopes' do
     it 'recent posts count should be 3' do
-      Post.create( author: @user, title: 'post 1', text: 'content', comments_counter: 3, likes_counter: 3)
-      Post.create( author: @user, title: 'post 2', text: 'content', comments_counter: 3, likes_counter: 3)
-      Post.create( author: @user, title: 'post 3', text: 'content', comments_counter: 3, likes_counter: 3)
-      Post.create( author: @user, title: 'post 3', text: 'content', comments_counter: 3, likes_counter: 3)
+      Post.create(author: @user, title: 'post 1', text: 'content', comments_counter: 3, likes_counter: 3)
+      Post.create(author: @user, title: 'post 2', text: 'content', comments_counter: 3, likes_counter: 3)
+      Post.create(author: @user, title: 'post 3', text: 'content', comments_counter: 3, likes_counter: 3)
+      Post.create(author: @user, title: 'post 3', text: 'content', comments_counter: 3, likes_counter: 3)
       expect(User.recent_posts(@user).count).to eq(3)
     end
   end

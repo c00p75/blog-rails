@@ -11,7 +11,7 @@ RSpec.describe Like, type: :model do
     it 'References correct user' do
       expect(User.find(@like.user_id)).to eq(@user)
     end
-  
+
     it 'Reference correct post' do
       expect(Post.find(@like.post_id)).to eq(@post)
     end

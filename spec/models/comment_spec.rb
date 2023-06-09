@@ -11,7 +11,7 @@ RSpec.describe Comment, type: :model do
     it 'References correct user' do
       expect(User.find(@comment.user_id)).to eq(@user)
     end
-  
+
     it 'Reference correct post' do
       expect(Post.find(@comment.post_id)).to eq(@post)
     end
