@@ -18,7 +18,7 @@ RSpec.describe Comment, type: :model do
   end
 
   describe 'scopes' do
-    it 'test if comment counter is updated' do
+    it 'should update comment counter for post' do
       Comment.create(user: @user, text: 'comment 2', post: @post)
       Comment.create(user: @user, text: 'comment 3', post: @post)
       Comment.update_comments_counter(@post)

@@ -34,7 +34,14 @@ RSpec.describe Post, type: :model do
   end
 
   describe 'scopes' do
-    it 'recent posts count should be 3' do
+    it 'should update posts counter for user' do
+      Post.create(author: @user, title: 'post 2', text: 'content', comments_counter: 3, likes_counter: 3)
+      Post.create(author: @user, title: 'post 3', text: 'content', comments_counter: 3, likes_counter: 3)
+      Post.update_posts_counter(@user)
+      expect(@user.posts_counter).to eq(3)
+    end
+
+    it 'recent comments count should be 3' do
       Comment.create(user: @user, text: 'comment 1', post: @post)
       Comment.create(user: @user, text: 'comment 2', post: @post)
       Comment.create(user: @user, text: 'comment 3', post: @post)
