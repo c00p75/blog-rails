@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = "Here is a list of users"
+    @users = 'Here is a list of users'
   end
 
   def show
-   @user = "Here is user with id " + params[:id]
+    @user = "Here is user with id #{params[:id]}"
   end
 end
