@@ -7,10 +7,14 @@
   padding: 0;
 }
 
+body { background-color: aliceblue; }
+
 a {
   text-decoration: none;
   color: black;
 }
+
+ul { list-style: none; }
 
 h1 {
   text-align: center;
@@ -64,8 +68,8 @@ svg {
 .align-self-end { align-self: end; }
 
 .card-img {
+  object-fit: contain;
   height: 10em;
-  margin-right: 10%;
 }
 
 .center {

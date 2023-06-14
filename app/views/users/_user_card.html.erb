@@ -1,0 +1,12 @@
+<li class="card flex">
+  <div class="item-1">
+    <img class="card-img" src=<%=user.photo%> alt="photo">
+  </div>
+  <div class="flex flex-btw item-2">
+    <h2><%=user_link(user)%></h2>
+    <span class="align-self-end count">Number of posts: <%=user.posts_counter || 0 %></span>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 13 24">
+    <path fill="gold" d="M0 2.089v21.912l6.546-6.26l6.545 6.26V2.089A2.11 2.11 0 0 0 10.982 0l-.077.001h.004h-8.726L2.11 0A2.109 2.109 0 0 0 .001 2.088v.001z"></path>
+  </svg>
+</li>

@@ -1,25 +1,10 @@
-<h1>Here is a specific user</h1>
+<div class="container center">
+  <%=render partial: 'users/user_card', locals: { user: @user }%>
 
-<div class="container center card">
-  <div class="flex">
-      <div class="item-1">
-        <img class="card-img" src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="photo">
-      </div>
-      <div class="flex flex-btw item-2">
-        <h2><%= @user.name %></h2>
-        <span class="align-self-end count">Number of posts: <%= @user.posts_counter ? @user.posts_counter : 0 %></span>
-      </div>
-    </div>
+  <div class="card">
+    <p style="margin-bottom: 1em">About <%=@user.name %>: <%= @user.bio %></p>
+    <%= posts_list(User.recent_posts(@user)) %>
+  <div>
 
-  <div><%= @user.bio %></div>
-    <% @user_posts.each do |post| %>
-      <div>
-        <h2><%= post.title %></h2>
-        <div><%= post.text %></div>
-        <div>
-          <span><%= post.comments_counter %></span>
-          <span><%= post.likes_counter %></span>
-        </div>
-      </div>
-    <% end %>
+  <span>See all posts</span>
 </div>
