@@ -8,9 +8,7 @@
 }
 
 body {
-  background: gray;
-  background-image: url("https://cdn.pixabay.com/photo/2016/09/08/22/43/books-1655783_1280.jpg");
-  backdrop-filter: blur(10px);
+  background: aliceblue;
 }
 
 a {
