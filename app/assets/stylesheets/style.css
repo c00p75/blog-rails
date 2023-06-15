@@ -14,15 +14,19 @@ a {
   color: black;
 }
 
-ul { list-style: none; }
+ul, li { list-style: none; }
 
 h1 {
-  text-align: center;
   font-family: 'Noto Serif Display', serif;
 }
 
 a:hover {
   color: red;
+}
+
+button {
+  background: none;
+  border: 0;
 }
 
 svg {
@@ -34,6 +38,8 @@ svg {
 
 .container {
   max-width: 820px;
+  background-color: white;
+  padding: 2em;
 }
 
 .flex { display: flex; }
@@ -56,6 +62,7 @@ svg {
   position: relative;
   backdrop-filter: blur(10px);
   padding: 20px;
+  box-shadow: 0 0 5px;
 }
 
 .item-1 { flex: 1; }
@@ -79,4 +86,44 @@ svg {
 
 .count {
   color: darkslategray
+}
+
+.count > span {
+  font-size: 0.8em;
+}
+
+.text-center {
+  display: block;
+  text-align: center;
+}
+
+.summary {
+  margin: 1em 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.post,
+.user-posts li {
+  border-left: 5px solid mintcream;
+  margin-bottom: 2em;
+  background: rgb(107 128 141 / 10%);
+  padding: 1em;
+}
+
+.more {
+  box-shadow: 0 0 5px 3px;
+  padding: 1em;
+  font-weight: 600;
+  background: honeydew;
+}
+
+.comment-section {
+  padding: 1em;
+  border-left: 3px solid cadetblue;
+  border-radius: 5px;
+  background: whitesmoke;
 }

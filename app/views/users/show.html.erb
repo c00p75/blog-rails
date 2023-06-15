@@ -1,10 +1,12 @@
 <div class="container center">
   <%=render partial: 'users/user_card', locals: { user: @user }%>
 
-  <div class="card">
-    <p style="margin-bottom: 1em">About <%=@user.name %>: <%= @user.bio %></p>
-    <%= posts_list(User.recent_posts(@user)) %>
+  <div class="card user-posts">
+    <p style="margin-bottom: 2em; font-style: italic;">About <%=@user.name %>: <%= @user.bio %></p>
+    <%= posts_list(User.recent_posts(@user), "user_post") %>
   <div>
 
-  <span>See all posts</span>
+  <div class="text-center" style="margin-top: 3em;">
+    <button class="more"><%=link_to "See all posts", user_posts_path(@user) %></button>
+  </div>
 </div>
