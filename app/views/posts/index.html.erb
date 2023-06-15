@@ -1,6 +1,4 @@
-<div class="container center">
-  <%=render partial: 'users/user_card', locals: { user: @user }%>
-  <div class="card">
-    <%= posts_list(@posts, "post_comments") %>
-  <div>
-</div>
+<%=render partial: 'users/user_card', locals: { user: @user }%>
+<div class="card">
+  <%= posts_list(@posts, "post_comments") %>
+<div>
