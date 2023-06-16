@@ -1,3 +1,17 @@
 <div class="card">
   <%= render partial: "post_with_comments", locals: { post: @post }  %>
+
+  <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
+    <%= form.submit 'Like post', class: 'submit' %>
+  <%end%>
+
+  <br><br>
+
+  <div class="comment">
+    <%= form_with model: Comment.new, url: user_post_comments_path(@user, @post) do |form| %>
+      <%= form.text_area :text, rows: 5 %>
+      <br>
+      <%= form.submit 'Add Comment', class: "submit" %>
+    <% end %>
+  </div>  
 </div>

@@ -19,17 +19,20 @@ a {
 ul,
 li { list-style: none; }
 
-h1 {
+h1 a {
   font-family: 'Noto Serif Display', serif;
 }
 
+h1 { margin-bottom: 2em; }
+
 a:hover {
-  color: red;
+  color: teal;
 }
 
 button {
   background: none;
   border: 0;
+  cursor: pointer;
 }
 
 svg {
@@ -55,7 +58,7 @@ svg {
 
 .flex-center {
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .card {
@@ -127,4 +130,54 @@ svg {
   border-left: 3px solid cadetblue;
   border-radius: 5px;
   background: rgb(255 255 255 / 50%);
+}
+
+.create {
+  height: 12em;
+  justify-content: space-around;
+  align-items: center;
+  background: lightsteelblue !important;
+}
+
+.create svg {
+  position: relative;
+  height: 100%;
+}
+
+.create span {
+  font-size: x-large;
+  font-family: inherit;
+}
+
+.post-form {
+  flex-direction: column;
+}
+
+.post-form form { max-width: 500px; }
+
+.post-form form,
+.post-form form input,
+.post-form form textarea {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.post-form form input,
+.post-form form textarea {
+  border: 1px solid gray;
+  padding: 1em;
+}
+
+.submit {
+  padding: 1em;
+  width: fit-content !important;
+  background-color: cornflowerblue;
+  border: 0 !important;
+  cursor: pointer;
+}
+
+.comment form,
+.comment form textarea {
+  width: 100%;
+  border-radius: 5px;
 }
