@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     # Using instance variable rather than local variables because rails knows to share the variables with erb template.
     @users = User.all # Retrieve all users from Users tabel
+    @user = current_user
   end
 
   def show
