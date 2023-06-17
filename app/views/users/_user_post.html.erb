@@ -1,0 +1,8 @@
+<li>
+  <h3><%= post_link(post) %></h2>
+  <div class="summary"><%= post.text %></div>
+  <div class="flex count" style="justify-content: flex-end;">
+    <span>Comments: <%= post.comments_counter || 0 %></span>
+    <span style="margin-left: 1em;">Likes: <%= post.likes_counter || 0 %></span>
+  </div>
+</li>

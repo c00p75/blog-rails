@@ -1,0 +1,7 @@
+<div class="post">
+  <%= render partial: "users/user_post", locals: { post: post }%>
+  <div class="comment-section" style="margin-top: 1em;">
+    <span class="count" style="font-style: italic; font-size: 0.9em; font-weight: 600">Recent Comments</span>
+    <ul style="margin-top: 1em;"><%= comments_list(post)%></ul>
+  </div>
+</div>

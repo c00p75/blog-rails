@@ -1,1 +1,4 @@
-<h1>Here is a list of posts for a particular user.</h1>
+<%=render partial: 'users/user_card', locals: { user: @user }%>
+<div class="card">
+  <%= posts_list(@posts, "post_comments") %>
+<div>
