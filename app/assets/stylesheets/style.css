@@ -157,27 +157,30 @@ svg {
 
 .post-form form,
 .post-form form input,
-.post-form form textarea {
+.post-form form textarea,
+.comment form,
+.comment form textarea {
   width: 100%;
   border-radius: 5px;
 }
 
 .post-form form input,
-.post-form form textarea {
+.post-form form textarea,
+.comment form textarea {
   border: 1px solid gray;
   padding: 1em;
 }
 
 .submit {
+  border-radius: 5px;
   padding: 1em;
   width: fit-content !important;
   background-color: cornflowerblue;
   border: 0 !important;
   cursor: pointer;
+  font-size: inherit;
 }
 
-.comment form,
-.comment form textarea {
-  width: 100%;
-  border-radius: 5px;
+.submit:hover {
+  color: inherit;
 }
