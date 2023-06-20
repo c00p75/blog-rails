@@ -117,6 +117,11 @@ Run tests with:
 - GitHub: [@c00p75](https://github.com/c00p75)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/georgemsapenda/)
 
+👤 **George M'sapenda**
+
+- GitHub: [@calebchris000](https://github.com/calebchris000)
+- LinkedIn: [@calebchris000](https://www.linkedin.com/in/calebchris000/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
