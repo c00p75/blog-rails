@@ -1,3 +1,4 @@
+<% update_posts_counter(@user) %>
 <%=render partial: 'users/user_card', locals: { user: @user }%>
 
 <div class="card user-posts">
@@ -5,6 +6,6 @@
   <%= posts_list(User.recent_posts(@user), "user_post") %>
 <div>
 
-<div class="text-center" style="margin-top: 3em;">
-  <button class="more"><%=link_to "See all posts", user_posts_path(@user) %></button>
-</div>
+<button class="text-center" style="margin: auto; margin-top: 3em;">
+  <%=link_to "See all posts", user_posts_path(@user), class: "more" %>
+</button>

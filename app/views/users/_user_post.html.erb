@@ -1,5 +1,6 @@
 <li>
-  <h3><%= post_link(post) %></h2>
+  <h2><%= post_link(post) %></h2>
+  <%= show_post_author(post.author, post) %>
   <div class="summary"><%= post.text %></div>
   <div class="flex count" style="justify-content: flex-end;">
     <span>Comments: <%= post.comments_counter || 0 %></span>

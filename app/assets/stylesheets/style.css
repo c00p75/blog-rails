@@ -184,3 +184,8 @@ svg {
 .submit:hover {
   color: inherit;
 }
+
+.author {
+  font-weight: lighter;
+  font-style: italic;
+}

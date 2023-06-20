@@ -54,3 +54,9 @@ module UsersPostsHelper
     comments.map { |comment| render partial: 'posts/comment', locals: { comment: } }.join.html_safe
   end
 end
+
+# Show post author on post route
+def show_post_author(user, post)
+  return unless current_page?(user_post_path(user.id, post))
+  content_tag(:span, class: 'author') { ' by '.html_safe + user_link(user) }
+end
