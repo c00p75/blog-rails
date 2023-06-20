@@ -13,50 +13,6 @@ RSpec.describe 'Posts', type: :feature do
     @like = Like.create(user: @user, post: @post)
   end
 
-  describe 'User post index route: GET /posts' do
-    before(:example) do
-      visit user_posts_path(@user)
-    end
-
-    it "show user's profile picture" do
-      expect(page.find('img')['src']).to have_content @user.photo
-    end
-
-    it "show user's username" do
-      expect(page).to have_content('George R Martin')
-    end
-
-    it 'show  number of posts the user has written' do
-      expect(page).to have_content('Number of posts: 1')
-    end
-
-    it "show the post's title" do
-      expect(page).to have_content('post 1')
-    end
-
-    it "show  some of the post's body" do
-      expect(page).to have_content('content')
-    end
-
-    it 'show the first comments on a post' do
-      expect(page).to have_content('Great post')
-    end
-
-    it 'show the number of comments a post has' do
-      expect(page).to have_content('Comments: 1')
-    end
-
-    it 'show the number of likes a post has' do
-      expect(page).to have_content('Likes: 1')
-    end
-
-    it 'when I click on the post title show the post' do
-      find("a[href='/users/#{@user.id}/posts/#{@post.id}']").click
-      sleep 1
-      expect(current_path).to eq user_post_path(@user, @post)
-    end
-  end
-
   describe 'post show route: GET /posts/:id' do
     before(:example) do
       visit user_post_path(@user, @post)

@@ -10,30 +10,6 @@ RSpec.describe 'Users', type: :feature do
     @like = Like.create(user: @user, post: @post)
   end
 
-  describe 'user index page at route: GET /users' do
-    before(:example) do
-      visit users_path
-    end
-
-    it 'shows the username for all users' do
-      expect(page).to have_content('George R Martin')
-    end
-
-    it 'shows the profile picture for each user' do
-      expect(page).to have_selector('img.card-img[alt="photo"]', visible: true)
-    end
-
-    it 'shows the number of posts each user  has written' do
-      expect(page).to have_content('Number of posts: 1')
-    end
-
-    it "shows posts when user's name is clicked" do
-      find("a[href='/users/#{@user.id}']").click
-      sleep 1
-      expect(current_path).to eq user_path(@user)
-    end
-  end
-
   describe 'user show page at route: GET /users/:id' do
     before(:example) do
       visit user_path(@user)
