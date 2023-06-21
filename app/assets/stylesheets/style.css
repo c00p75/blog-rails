@@ -13,11 +13,7 @@ body {
 
 a {
   text-decoration: none;
-  background-color: black;
-  height: 2rem;
-  width: 50%;
-  color: white;
-  margin: 1rem auto;
+  color: black;
 }
 
 ul,
@@ -167,14 +163,20 @@ svg {
   flex-direction: column;
 }
 
-.post-form form {
-  max-width: 500px;
-}
-
-input,
-textarea {
+.form-wrapper input,
+.form-wrapper textarea {
   width: 100%;
   height: 2rem;
+  padding: 0.5em;
+}
+
+.remember-me input {
+  width: auto;
+  margin-right: 1em;
+}
+
+.post-form form {
+  max-width: 500px;
 }
 
 .post-form form,
@@ -242,4 +244,16 @@ h2 {
   justify-content: center;
   text-align: center;
   margin: 20px 0;
+}
+
+.form-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: black;
+  height: 2rem;
+  width: 50%;
+  color: white;
+  margin: 1rem auto;
 }
