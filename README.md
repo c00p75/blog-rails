@@ -63,7 +63,7 @@
 In order to run this project you need:
 1. Ruby installed on your machine
 2. Text editor (VSCode, Sublime, Atom, etc.)
-3. Install Rails gem
+3. Install Rails gem.
 
 ### Setup
 
