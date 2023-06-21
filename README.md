@@ -63,7 +63,7 @@
 In order to run this project you need:
 1. Ruby installed on your machine
 2. Text editor (VSCode, Sublime, Atom, etc.)
-3. Install Rails gem
+3. Install Rails gem.
 
 ### Setup
 
@@ -117,7 +117,7 @@ Run tests with:
 - GitHub: [@c00p75](https://github.com/c00p75)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/georgemsapenda/)
 
-👤 **George M'sapenda**
+👤 **Caleb Nwaizu**
 
 - GitHub: [@calebchris000](https://github.com/calebchris000)
 - LinkedIn: [@calebchris000](https://www.linkedin.com/in/calebchris000/)
