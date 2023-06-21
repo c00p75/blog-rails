@@ -66,6 +66,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # + Used to check for n + 1 problems
+  # gem 'bullet'
 end
 
 group :test do
@@ -75,4 +78,4 @@ group :test do
   gem 'webdrivers'
 end
 
-# gem 'bullet', group: :development
+gem "devise", "~> 4.9"
