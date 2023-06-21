@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&display=swap");
 
 * {
   font-family: sans-serif;
@@ -17,13 +17,17 @@ a {
 }
 
 ul,
-li { list-style: none; }
-
-h1 a {
-  font-family: 'Noto Serif Display', serif;
+li {
+  list-style: none;
 }
 
-h1 { margin-bottom: 2em; }
+h1 a {
+  font-family: "Noto Serif Display", serif;
+}
+
+h1 {
+  margin-bottom: 2em;
+}
 
 a:hover {
   color: teal;
@@ -49,7 +53,9 @@ svg {
   padding: 0.1em 2em;
 }
 
-.flex { display: flex; }
+.flex {
+  display: flex;
+}
 
 .flex-btw {
   justify-content: space-between;
@@ -70,14 +76,18 @@ svg {
   box-shadow: 0 0 5px;
 }
 
-.item-1 { flex: 1; }
+.item-1 {
+  flex: 1;
+}
 
 .item-2 {
   flex: 1;
   padding: 0 2em;
 }
 
-.align-self-end { align-self: end; }
+.align-self-end {
+  align-self: end;
+}
 
 .card-img {
   object-fit: contain;
@@ -153,7 +163,9 @@ svg {
   flex-direction: column;
 }
 
-.post-form form { max-width: 500px; }
+.post-form form {
+  max-width: 500px;
+}
 
 .post-form form,
 .post-form form input,
@@ -199,4 +211,24 @@ svg {
   border: 5px;
   cursor: pointer;
   font-size: inherit;
+}
+
+.form_registeration {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  width: 50%;
+}
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
 }
