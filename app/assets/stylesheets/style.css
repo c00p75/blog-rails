@@ -189,3 +189,14 @@ svg {
   font-weight: lighter;
   font-style: italic;
 }
+
+.logout {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  padding: 1em;
+  width: fit-content !important;
+  border: 5px;
+  cursor: pointer;
+  font-size: inherit;
+}
