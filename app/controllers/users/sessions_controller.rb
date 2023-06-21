@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
@@ -16,7 +14,7 @@ class Users::SessionsController < Devise::SessionsController
   # DELETE /resource/sign_out
   def destroy
     sign_out(current_user)
-    redirect_to root_path, notice: "You have been successfully logged out."
+    redirect_to root_path, notice: 'You have been successfully logged out.'
   end
 
   # protected
