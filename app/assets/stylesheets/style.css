@@ -13,7 +13,11 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  background-color: black;
+  height: 2rem;
+  width: 50%;
+  color: white;
+  margin: 1rem auto;
 }
 
 ul,
@@ -167,6 +171,12 @@ svg {
   max-width: 500px;
 }
 
+input,
+textarea {
+  width: 100%;
+  height: 2rem;
+}
+
 .post-form form,
 .post-form form input,
 .post-form form textarea,
@@ -202,11 +212,6 @@ svg {
   font-style: italic;
 }
 
-input, textarea {
-  width: 100%;
-  height: 2rem;
-}
-
 .logout {
   position: absolute;
   top: 0;
@@ -237,12 +242,4 @@ h2 {
   justify-content: center;
   text-align: center;
   margin: 20px 0;
-}
-
-a {
-  background-color: black;
-  height: 2rem;
-  width: 50%;
-  color: white;
-  margin: 1rem auto;
 }
