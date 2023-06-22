@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @user = current_user
     @post = Post.find(params[:post_id])
@@ -21,7 +23,6 @@ class CommentsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
-    authorize! :destroy, @comment
 
     return unless @comment.destroy
 

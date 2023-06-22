@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -30,9 +32,6 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-
-    # Check if the current user is authorized to delete the post
-    authorize! :destroy, @post
 
     # Delete associated likes and comments
     @post.likes.destroy_all
