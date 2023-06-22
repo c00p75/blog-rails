@@ -5,9 +5,9 @@ class Ability
     user ||= User.new # Guest user (not logged in)
 
     # Post abilities
-    can :destroy, Post, author_id: user.id
-    can :destroy, Post, author: { role: 'admin' }
-    can :destroy, Comment, user_id: user.id
-    can :destroy, Comment, user: { role: 'admin' }
+    can :manage, Post, author_id: user.id
+    can :manage, Post, author: { role: 'admin' }
+    can :manage, Comment, user_id: user.id
+    can :manage, Comment, user: { role: 'admin' }
   end
 end
