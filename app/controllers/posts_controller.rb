@@ -31,13 +31,13 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     
-    # Delete associated likes
+    # Check if the current user is authorized to delete the post
+    authorize! :destroy, @post
+    
+    # Delete associated likes and comments
     @post.likes.destroy_all
     @post.comments.destroy_all
 
-    # Check if the current user is authorized to delete the post
-    # authorize! :destroy, @post
-    
     if @post.destroy
       redirect_to user_path(User.find(params[:user_id]))
     end

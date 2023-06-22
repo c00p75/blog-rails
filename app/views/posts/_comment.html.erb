@@ -1,6 +1,11 @@
-<li style="margin-top: 0.8em">
+<li style="margin-top: 0.8em, position: relative">
   <div class="flex">
     <h4><%= user_link(User.find(comment.user_id)) %></h4>
     <div style="margin-left: 2em;"><%= comment.text %></div>
   </div>
+  <% if can? :destroy, comment %>
+    <%= button_to user_post_comment_path(@user, @post, comment), method: :delete do %>
+      <%= 'Delete' %>
+    <% end %>
+  <% end %>
 </li>
