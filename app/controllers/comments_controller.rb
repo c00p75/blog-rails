@@ -23,9 +23,9 @@ class CommentsController < ApplicationController
     @comment = @post.comments.find(params[:id])
     authorize! :destroy, @comment
 
-    if @post.destroy
-      redirect_to user_posts_path(@user, @post)
-    end
+    return unless @comment.destroy
+
+    redirect_to user_post_path(@user, @post)
   end
 
   private
