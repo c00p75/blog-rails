@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:user_id])
     @post = Post.includes(:comments).find(params[:id])
   end
 
@@ -25,6 +25,21 @@ class PostsController < ApplicationController
       redirect_to user_post_path(@post.author_id, @post)
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    
+    # Delete associated likes
+    @post.likes.destroy_all
+    @post.comments.destroy_all
+
+    # Check if the current user is authorized to delete the post
+    # authorize! :destroy, @post
+    
+    if @post.destroy
+      redirect_to user_path(User.find(params[:user_id]))
     end
   end
 
