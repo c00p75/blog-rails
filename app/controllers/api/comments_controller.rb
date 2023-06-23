@@ -16,7 +16,7 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(user_id: @user.id, post_id: @post.id, text: params[:text])
 
     if @comment.save
-        @comments = Comment.all
+      @comments = Comment.all
       render json: @comments
     else
       render json: { errors: @comment.errors.full_messages }
