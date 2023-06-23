@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params.merge(user: @user, post: @post))
     if @comment.save
       Comment.update_comments_counter(@post)
-      redirect_to user_post_path(@post.author_id, @post)
+      redirect_to user_post_path(user_id: @post.author_id, id: @post)
     else
       render :new, status: :unprocessable_entity
     end
