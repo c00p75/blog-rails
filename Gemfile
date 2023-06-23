@@ -70,6 +70,7 @@ group :development do
   # + Used to check for n + 1 problems
   # gem 'bullet'
 end
+gem 'rswag'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
