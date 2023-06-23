@@ -1,8 +1,13 @@
 class Api::CommentsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @post = Post.find(@user.id)
+    @post = Post.find(params[:post_id])
     render json: @post.comments
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
+    render json: @comment
   end
 
   def create
