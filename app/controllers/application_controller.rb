@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
+  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
-
-  protect_from_forgery with: :exception
-
   before_action :update_allowed_parameters, if: :devise_controller?
 
   protected
