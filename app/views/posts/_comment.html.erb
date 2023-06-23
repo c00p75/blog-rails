@@ -1,6 +1,13 @@
 <li style="margin-top: 0.8em">
-  <div class="flex">
+  <div class="flex" style="position: relative;">
     <h4><%= user_link(User.find(comment.user_id)) %></h4>
     <div style="margin-left: 2em;"><%= comment.text %></div>
+    <% if action_name == 'show' && can?(:destroy, comment) %>
+      <%= button_to user_post_comment_path(@user, @post, comment), method: :delete do %>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="delete">
+          <path fill="#696969" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12Z"></path>
+        </svg>
+      <% end %>
+    <% end %>
   </div>
 </li>

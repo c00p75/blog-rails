@@ -133,6 +133,7 @@ svg {
   padding: 1em;
   font-weight: 600;
   background: honeydew;
+  cursor: auto;
 }
 
 .comment-section {
@@ -256,4 +257,8 @@ h2 {
   width: 50%;
   color: white;
   margin: 1rem auto;
+}
+
+.delete:hover path {
+  fill: tomato;
 }

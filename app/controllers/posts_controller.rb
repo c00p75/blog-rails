@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:user_id])
     @post = Post.includes(:comments).find(params[:id])
   end
 
@@ -26,6 +28,18 @@ class PostsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+
+    # Delete associated likes and comments
+    @post.likes.destroy_all
+    @post.comments.destroy_all
+
+    return unless @post.destroy
+
+    redirect_to user_path(User.find(params[:user_id]))
   end
 
   private
