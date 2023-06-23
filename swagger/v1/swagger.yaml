@@ -1,0 +1,59 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  http://127.0.0.1:3000/api/users/:
+    get:
+      summary: gets list of users
+      tags:
+      - Users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              examples:
+                example_0:
+                  value:
+                    id: 1
+                    name: Caleb
+                    photo: img
+                    bio: A cool guy
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  photo:
+                    type: string
+                  bio:
+                    type: string
+                required:
+                - name
+                - photo
+                - bio
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  photo:
+                    type: string
+                  bio:
+                    type: string
+                required:
+                - name
+                - photo
+                - bio
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
