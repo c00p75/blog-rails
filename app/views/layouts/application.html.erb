@@ -13,6 +13,7 @@
   <body>
     <div class="container center">
       <h1 class="text-center"><%= link_to 'Blog App', root_path() %></h1>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, style: "position: absolute; top: 1em; right: 1em; font-size: 1em;" %>
       <%= yield %>
     </div>
   </body>
