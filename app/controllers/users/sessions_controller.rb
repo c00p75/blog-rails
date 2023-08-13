@@ -17,6 +17,13 @@ class Users::SessionsController < Devise::SessionsController
     redirect_to root_path, notice: 'You have been successfully logged out.'
   end
 
+  # Custom controller to log in as test
+  def login_as_test_user
+    user = User.find_by(email: 'test@test.com')
+    sign_in(user)
+    redirect_to root_path
+  end
+
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.

@@ -7,10 +7,6 @@
     <span style="margin-left: 1em;">Likes: <%= post.likes_counter || 0 %></span>
   </div>
   <% if can? :destroy, post %>
-    <%= button_to user_post_path(post.author_id, post), method: :delete do %>
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" class="delete" style="top: 1em;">
-        <path fill="#696969" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12Z"></path>
-      </svg>
-    <% end %>
+    <%= button_to 'Delete Post', user_post_path(post.author_id, post), method: :delete, style: "position: absolute; top: 1.1em; right: 1em;" %>
   <% end %>
 </li>
