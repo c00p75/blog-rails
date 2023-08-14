@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+![ERM diagram](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd_v1_1.png)
 <div align="center">
   <h3><b>Blog App</b></h3>
 </div>
